@@ -17,24 +17,24 @@ module react_top (
 wire [15:0]    disp;
 
 react_led u1(
-    .clk(clk);
-    .rst(rst);
+    .clk(clk),
+    .rst(rst),
     .btn(BTN0),
     .LED(LED0)
 );
 
 react_timer u2(
-    .clk(clk);
-    .rst(rst);
-    .LED(LED0);
-    .btn(BTN0);
+    .clk(clk),
+    .rst(rst),
+    .LED(LED0),
+    .btn(BTN0),
     .disp(disp)
 );
 
 react_seg7 u3(
-    .clk(clk);
-    .rst(rst);
-    .dat(disp);
+    .clk(clk),
+    .rst(rst),
+    .dat(disp),
     .SEG(SEG),
     .AN(AN)
 );
