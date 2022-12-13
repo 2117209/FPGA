@@ -1,21 +1,22 @@
 //***************************************************************/
-//模块名: cpu
-//作 者: Hang Liu
+//模块�?: cpu
+//�? �?: Hang Liu
 
-//用 途: CPU内部设计划分
+//�? �?: CPU内部设计划分
 //版本说明:
 //***************************************************************/
 module cpu (
-    input clk,rst;
-    input start;
-    input [15:0] ir;
+    input clk,
+    input rst,
+    input start,
+    input [15:0] ir,
 
-    output [7:0] pc;
-    output rom_en;
-    output wr_ram,cs_ram;
-    output [7:0] addr_ram;
-    output [7:0] alu_out;
-    output [39:0] rf_data;
+    output [7:0] pc,
+    output rom_en,
+    output wr_ram,cs_ram,
+    output [7:0] addr_ram,
+    output [7:0] alu_out,
+    output [39:0] rf_data
 );
 wire[7:0] imm;
 wire[3:0] sel_rf;
@@ -44,7 +45,7 @@ datapath u6(
 );
 
 controller u7(
-    .clk(clk_n),
+    .clk(clk),
     .rst(rst),
     .start(start),
     .alu_zero(alu_zero),

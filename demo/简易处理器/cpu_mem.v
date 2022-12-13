@@ -6,12 +6,12 @@
 //版本说明:
 //***************************************************************/
 module cpu_mem (
-    input clk,rst;
-    input start;
-    
-    output [39:0] rf_data;
-    output [7:0]    pc;
-    output [15:0]  ir;
+    input clk,rst,
+    input start,
+
+    output [39:0] rf_data,
+    output [7:0]    pc,
+    output [15:0]  ir
 );
 
 wire rom_en;
@@ -28,6 +28,7 @@ cpu u3(
     .rom_en(rom_en),
     .ir(ir),
     .pc(pc),
+    .start(start),
     .rf_data(rf_data),
     .wr_ram(wr_ram),
     .cs_ram(cs_ram),

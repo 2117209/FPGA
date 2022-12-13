@@ -6,17 +6,17 @@
 //版本说明:
 //***************************************************************/
 module controller (
-    input clk,rst,start,alu_zero;
-    input [15:0] ir;
-    output reg r_wf,en_reg,en_rf,en_alu,en_imm;
-    output reg [3:0]sel_rf;
-    output reg [2:0]sel_alu;
-    output reg sel_mux;
-    output reg [7:0]imm;
-    output reg [7:0]pc;
-    output reg rom_en;
-    output reg wr_ram,cs_ram;
-    output reg [7:0]addr_ram;
+    input clk,rst,start,alu_zero,
+    input [15:0] ir,
+    output reg r_wf,en_reg,en_rf,en_alu,en_imm,
+    output reg [3:0]sel_rf,
+    output reg [2:0]sel_alu,
+    output reg sel_mux,
+    output reg [7:0]imm,
+    output reg [7:0]pc,
+    output reg rom_en,
+    output reg wr_ram,cs_ram,
+    output reg [7:0]addr_ram
 );
 parameter s0=6'b000000,s1=6'b000001,s2=6'b000010,s3=6'b000011,s4=6'b000100,
           s5=6'b000101,s5_2=6'b000110,s5_3=6'b000111,
@@ -28,24 +28,24 @@ parameter s0=6'b000000,s1=6'b000001,s2=6'b000010,s3=6'b000011,s4=6'b000100,
           s11=6'b100011,s11_2=6'b100100,s11_3=6'b100101,s11_4=6'b100110,s11_5=6'b100111,
           s12= 6'b101000,
           done= 6'b101001;
-parameter loadi=4'b0011,add=4'b0100,sun=4'b0101,jz=4'b0110,store=4'b1000,
+parameter loadi=4'b0011,add=4'b0100,sub=4'b0101,jz=4'b0110,store=4'b1000,
           shiftl=4'b0111,reg2reg=4'b0010,halt=4'b1111;
 reg [5:0] state;
 reg [3:0] opcode;
 reg [7:0] address;
 reg [3:0] register;
-always @(negedge clk or posedge rst) begin
-    sel_mux<=1;
-    en_rf<=0;
-    en_reg<=0;
-    en_alu<=0;
-    em_imm<=0;
-    rom_en<=0;
-    wr_ram<=0;
-    cs_ram<=0;
+always @(posedge clk or posedge rst) begin     
     if(rst)begin
         state<=s0;
         pc<=0;
+        en_alu<=0;
+        sel_mux<=1;
+        en_rf<=0;
+        en_reg<=0;
+        en_imm<=0;
+        rom_en<=0;
+        wr_ram<=0;
+        cs_ram<=0;
     end
     else begin
         case(state)
@@ -73,19 +73,19 @@ always @(negedge clk or posedge rst) begin
         s4:begin
             case(opcode)  //译码
             loadi:state<=s5;
-            add: state<=s6;
-            sub: state<=s7;
-            jz: state<=s8;
-            store: state<=s9;
-            reg2reg: state<=s10;
-            shiftl: state<=s11;
-            halt: state<=done;
+            add:state<=s6;
+            sub:state<=s7;
+            jz:state<=s8;
+            store:state<=s9;
+            reg2reg:state<=s10;
+            shiftl:state<=s11;
+            halt:state<=done;
             default:state<=s1;
             endcase
         end
         s5:begin
             imm<=address;
-            em_imm<=1;
+            en_imm<=1;
             state<=s5_2;
         end
         s5_2:begin
@@ -129,7 +129,7 @@ always @(negedge clk or posedge rst) begin
         end
         s7:begin
             sel_rf<=ir[7:4];
-            en_rf<=1'
+            en_rf<=1;
             r_wf<=1;
             state<=s7_2;
         end
@@ -195,7 +195,7 @@ always @(negedge clk or posedge rst) begin
         end
         s10_2:begin
             en_alu<=1;
-            sel_slu<=3'b000;
+            sel_alu<=0;
             state<=s10_3;
         end
         s10_3:begin
@@ -206,7 +206,7 @@ always @(negedge clk or posedge rst) begin
         end
         s11:begin
             imm<=address;
-            em_imm<=1;
+            en_imm<=1;
             state<=s11_2;
         end
         s11_2:begin
@@ -218,7 +218,7 @@ always @(negedge clk or posedge rst) begin
             sel_rf<=register;
             en_rf<=1;
             r_wf<=1;
-            satte<=s11_4;
+            state<=s11_4;
         end
         s11_4:begin
             en_alu<=1;

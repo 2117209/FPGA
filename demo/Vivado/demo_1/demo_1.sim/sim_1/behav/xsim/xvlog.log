@@ -1,0 +1,23 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AAA/FPGA/demo/简易处理器/alu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AAA/FPGA/demo/简易处理器/controller.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module controller
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AAA/FPGA/demo/简易处理器/cpu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpu
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AAA/FPGA/demo/简易处理器/cpu_mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpu_mem
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'ir' is not allowed [E:/AAA/FPGA/demo/简易处理器/cpu_mem.v:18]
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AAA/FPGA/demo/简易处理器/datapath.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module datapath
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AAA/FPGA/demo/简易处理器/mux21.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux21
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AAA/FPGA/demo/简易处理器/ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AAA/FPGA/demo/简易处理器/register.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AAA/FPGA/demo/简易处理器/rf.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rf
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AAA/FPGA/demo/简易处理器/rom.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rom
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AAA/FPGA/demo/简易处理器/cpu_mem_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpu_mem_tb

@@ -19,11 +19,11 @@ cpu_mem uut(
 
 initial fork
     clk =0;
-    forever #clk=~clk;
+    forever #10 clk=~clk;
     rst=0;
     #35 rst=1;
     #65 rst=0;
-    start=1;
+    start=1'b1;
     join
 
 endmodule //cpu_mem_tb

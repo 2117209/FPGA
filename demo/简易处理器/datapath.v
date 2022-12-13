@@ -1,23 +1,22 @@
 //***************************************************************/
-//模块名: datapath
-//作 者: Hang Liu
+//模块�?: datapath
+//�? �?: Hang Liu
 
-//用 途: 数据路径的顶层文件；
+//�? �?: 数据路径的顶层文件；
 //版本说明:
 //***************************************************************/
 module datapath (
-    input rst,clk,r_wf,en_rf,en_reg,en_alu,en_imm;
-    input [7:0] imm;
-    input [2:0] sel_alu;
-    input [3:0] sel_rf;
+    input rst,clk,r_wf,en_rf,en_reg,en_alu,en_imm,
+    input [7:0] imm,
+    input [2:0] sel_alu,
+    input [3:0] sel_rf,
     input sel_mux,
 
-    output [39:0] rf_data;
-    output alu_zero;
-    output [7:0] alu_out;
+    output [39:0] rf_data,
+    output alu_zero,
+    output [7:0] alu_out
 );
-wire [7:0] op1,op2,out_imm,out_rf;
-
+wire [7:0] op1,op2,out_rf,out_imm;
 register u8(
     .clk(clk),
     .en(en_reg),
@@ -29,7 +28,7 @@ register u9(
     .clk(clk),
     .en(en_imm),
     .in(imm),
-    .out(out_imm);
+    .out(out_imm)
 );
 
 mux21 u10(

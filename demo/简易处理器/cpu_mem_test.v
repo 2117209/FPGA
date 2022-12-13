@@ -6,11 +6,10 @@
 //版本说明:
 //***************************************************************/
 module cpu_mem_test (
-    input clk,rst;
-    input [1:0] key;
-
-    output [7:0] duan;
-    output [3:0] wei;
+    input clk,rst,
+    input [1:0] key,
+    output [7:0] duan,
+    output [3:0] wei
 );
 wire[39:0] rf_data;
 wire[7:0] pc;

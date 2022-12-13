@@ -6,9 +6,9 @@
 //版本说明:
 //***************************************************************/
 module mux21 (
-    input sel;
-    input [7:0] in1,in2;
-    output [7:0] out;
+    input sel,
+    input [7:0] in1,in2,
+    output [7:0] out
 );
 assign out=sel?in2:in1;
 

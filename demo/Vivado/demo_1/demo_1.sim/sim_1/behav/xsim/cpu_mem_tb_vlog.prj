@@ -1,0 +1,19 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../../../简易处理器/alu.v" \
+"../../../../../../简易处理器/controller.v" \
+"../../../../../../简易处理器/cpu.v" \
+"../../../../../../简易处理器/cpu_mem.v" \
+"../../../../../../简易处理器/datapath.v" \
+"../../../../../../简易处理器/mux21.v" \
+"../../../../../../简易处理器/ram.v" \
+"../../../../../../简易处理器/register.v" \
+"../../../../../../简易处理器/rf.v" \
+"../../../../../../简易处理器/rom.v" \
+"../../../../../../简易处理器/cpu_mem_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

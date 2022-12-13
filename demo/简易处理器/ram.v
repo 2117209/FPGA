@@ -1,18 +1,19 @@
 //***************************************************************/
-//模块名: ram
-//作 者: Hang Liu
+//模块�?: ram
+//�? �?: Hang Liu
 
-//用 途: 数据存储器可读可写；
+//�? �?: 数据存储器可读可写；
 //版本说明:
 //***************************************************************/
-module ram (
-    parameter M=8,N=8;
-    input rd,wr,cs,clk;
-    input [N-1:0] addr;
-    input [M-1:0] data_in;
-    output reg [M-1:0] data_out;
+module ram 
+    #(parameter M=8,N=8)
+    (
+    input rd,wr,cs,clk,
+    input [N-1:0] addr,
+    input [M-1:0] data_in,
+    output reg [M-1:0] data_out
 );
-reg [M-1:0] MEMORY [0:2**N-1];
+reg [M-1:0] memory [0:2**N-1];
 always @(posedge clk) begin
     if(cs)begin
         if(rd) data_out<=memory[addr];

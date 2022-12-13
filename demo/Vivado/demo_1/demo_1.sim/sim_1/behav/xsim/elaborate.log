@@ -1,0 +1,33 @@
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx_Vivado_SDK_2018.3_1207_2324/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 89a3fad388a7466eae75f616c76daccf --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot cpu_mem_tb_behav xil_defaultlib.cpu_mem_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "E:/AAA/FPGA/demo/简易处理器/cpu_mem.v" Line 8. Module cpu_mem doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/AAA/FPGA/demo/简易处理器/cpu.v" Line 8. Module cpu doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/AAA/FPGA/demo/简易处理器/datapath.v" Line 8. Module datapath doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/AAA/FPGA/demo/简易处理器/register.v" Line 8. Module register doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/AAA/FPGA/demo/简易处理器/register.v" Line 8. Module register doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/AAA/FPGA/demo/简易处理器/mux21.v" Line 8. Module mux21 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/AAA/FPGA/demo/简易处理器/alu.v" Line 8. Module alu doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/AAA/FPGA/demo/简易处理器/rf.v" Line 8. Module rf doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/AAA/FPGA/demo/简易处理器/controller.v" Line 8. Module controller doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/AAA/FPGA/demo/简易处理器/rom.v" Line 8. Module rom doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/AAA/FPGA/demo/简易处理器/ram.v" Line 8. Module ram doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.register
+Compiling module xil_defaultlib.mux21
+Compiling module xil_defaultlib.alu
+Compiling module xil_defaultlib.rf
+Compiling module xil_defaultlib.datapath
+Compiling module xil_defaultlib.controller
+Compiling module xil_defaultlib.cpu
+Compiling module xil_defaultlib.rom
+Compiling module xil_defaultlib.ram
+Compiling module xil_defaultlib.cpu_mem
+Compiling module xil_defaultlib.cpu_mem_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot cpu_mem_tb_behav
