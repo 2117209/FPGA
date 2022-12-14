@@ -15,9 +15,10 @@ module alu (
 );
 always @(posedge clk) begin
     if(en)begin
+        alu_zero<=0;
         case(sel)
             3'b000:out<=in1;
-            3'b001:alu_zero<=(in1==0)?1'b1:1'b0;
+            3'b001:if(in1==0) alu_zero<=1;else alu_zero<=0;
             3'b010:out<=in1+in2;
             3'b011:out<=in1-in2;
             3'b100:out<=in1<<in2;

@@ -5,12 +5,12 @@
 //用 途: 按键消抖，测量LED从点亮到按键按下延时；
 //版本说明:
 //***************************************************************/
-module react _timer (
-    input   clk;
-    input   rst;
-    input   LED;
-    input   btn;
-    output reg [15:0] disp;
+module react_timer (
+    input   clk,
+    input   rst,
+    input   LED,
+    input   btn,
+    output  [15:0] disp
 );
 reg clk_1khz;
 reg [14:0] cnt;
@@ -68,8 +68,8 @@ always @(negedge clk or posedge rst) begin
                     end
                     else cnt_time[3:0]<=cnt_time[3:0]+1; 
                 end
-                else cnt_time<=cnt_time+1;
             end
+            else cnt_time<=0;
         end
     end
 end

@@ -6,12 +6,12 @@
 //版本说明:
 //***************************************************************/
 module react_top (
-    input           clk ;
-    input           rst;
-    input           BTN0；
-    output          LED0;
-    output [7:0]    SEG;
-    output [3:0]    AN;
+    input           clk ,
+    input           rst,
+    input           BTN0,
+    output          LED0,
+    output [7:0]    SEG,
+    output [3:0]    AN
 
 );
 wire [15:0]    disp;

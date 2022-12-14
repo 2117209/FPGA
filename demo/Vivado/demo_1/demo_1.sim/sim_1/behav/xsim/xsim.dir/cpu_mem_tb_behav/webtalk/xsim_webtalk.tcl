@@ -1,6 +1,6 @@
 webtalk_init -webtalk_dir E:/AAA/FPGA/demo/Vivado/demo_1/demo_1.sim/sim_1/behav/xsim/xsim.dir/cpu_mem_tb_behav/webtalk/
 webtalk_register_client -client project
-webtalk_add_data -client project -key date_generated -value "Tue Dec 13 22:49:51 2022" -context "software_version_and_target_device"
+webtalk_add_data -client project -key date_generated -value "Wed Dec 14 16:00:25 2022" -context "software_version_and_target_device"
 webtalk_add_data -client project -key product_version -value "XSIM v2018.3 (64-bit)" -context "software_version_and_target_device"
 webtalk_add_data -client project -key build_version -value "2405991" -context "software_version_and_target_device"
 webtalk_add_data -client project -key os_platform -value "WIN64" -context "software_version_and_target_device"
@@ -14,7 +14,7 @@ webtalk_add_data -client project -key target_package -value "not_applicable" -co
 webtalk_add_data -client project -key target_speed -value "not_applicable" -context "software_version_and_target_device"
 webtalk_add_data -client project -key random_id -value "bfdfc65b-3bbf-415b-aad8-68b80cc9f5f4" -context "software_version_and_target_device"
 webtalk_add_data -client project -key project_id -value "89a3fad388a7466eae75f616c76daccf" -context "software_version_and_target_device"
-webtalk_add_data -client project -key project_iteration -value "42" -context "software_version_and_target_device"
+webtalk_add_data -client project -key project_iteration -value "60" -context "software_version_and_target_device"
 webtalk_add_data -client project -key os_name -value "Microsoft Windows 8 or later , 64-bit" -context "user_environment"
 webtalk_add_data -client project -key os_release -value "major release  (build 9200)" -context "user_environment"
 webtalk_add_data -client project -key cpu_name -value "Intel(R) Core(TM) i7-7700HQ CPU @ 2.80GHz" -context "user_environment"
@@ -24,9 +24,9 @@ webtalk_add_data -client project -key system_ram -value "17.000 GB" -context "us
 webtalk_register_client -client xsim
 webtalk_add_data -client xsim -key Command -value "xsim" -context "xsim\\command_line_options"
 webtalk_add_data -client xsim -key trace_waveform -value "true" -context "xsim\\usage"
-webtalk_add_data -client xsim -key runtime -value "3 us" -context "xsim\\usage"
+webtalk_add_data -client xsim -key runtime -value "10 us" -context "xsim\\usage"
 webtalk_add_data -client xsim -key iteration -value "1" -context "xsim\\usage"
-webtalk_add_data -client xsim -key Simulation_Time -value "0.01_sec" -context "xsim\\usage"
-webtalk_add_data -client xsim -key Simulation_Memory -value "6668_KB" -context "xsim\\usage"
-webtalk_transmit -clientid 1677049901 -regid "" -xml E:/AAA/FPGA/demo/Vivado/demo_1/demo_1.sim/sim_1/behav/xsim/xsim.dir/cpu_mem_tb_behav/webtalk/usage_statistics_ext_xsim.xml -html E:/AAA/FPGA/demo/Vivado/demo_1/demo_1.sim/sim_1/behav/xsim/xsim.dir/cpu_mem_tb_behav/webtalk/usage_statistics_ext_xsim.html -wdm E:/AAA/FPGA/demo/Vivado/demo_1/demo_1.sim/sim_1/behav/xsim/xsim.dir/cpu_mem_tb_behav/webtalk/usage_statistics_ext_xsim.wdm -intro "<H3>XSIM Usage Report</H3><BR>"
+webtalk_add_data -client xsim -key Simulation_Time -value "0.08_sec" -context "xsim\\usage"
+webtalk_add_data -client xsim -key Simulation_Memory -value "6792_KB" -context "xsim\\usage"
+webtalk_transmit -clientid 978625124 -regid "" -xml E:/AAA/FPGA/demo/Vivado/demo_1/demo_1.sim/sim_1/behav/xsim/xsim.dir/cpu_mem_tb_behav/webtalk/usage_statistics_ext_xsim.xml -html E:/AAA/FPGA/demo/Vivado/demo_1/demo_1.sim/sim_1/behav/xsim/xsim.dir/cpu_mem_tb_behav/webtalk/usage_statistics_ext_xsim.html -wdm E:/AAA/FPGA/demo/Vivado/demo_1/demo_1.sim/sim_1/behav/xsim/xsim.dir/cpu_mem_tb_behav/webtalk/usage_statistics_ext_xsim.wdm -intro "<H3>XSIM Usage Report</H3><BR>"
 webtalk_terminate

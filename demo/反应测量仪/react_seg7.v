@@ -6,11 +6,11 @@
 //版本说明:
 //***************************************************************/
 module react_seg7 (
-    input   clk;
-    input   rst;
-    input   [15:0] dat;
-    output reg [7:0] SEG;
-    output reg [3:0] AN;
+    input   clk,
+    input   rst,
+    input   [15:0] dat,
+    output reg [7:0] SEG,
+    output reg [3:0] AN
 );
 //分频190Hz:
 wire clk_190Hz;

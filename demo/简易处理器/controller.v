@@ -35,15 +35,15 @@ reg [3:0] opcode;
 reg [7:0] address;
 reg [3:0] register;
 always @(posedge clk or posedge rst) begin     
+    rom_en<=0;
+    en_rf<=0;
+    en_alu<=0;
+    en_imm<=0; 
+    sel_mux<=1;
+    en_reg<=0;
     if(rst)begin
         state<=s0;
-        pc<=0;
-        en_alu<=0;
-        sel_mux<=1;
-        en_rf<=0;
-        en_reg<=0;
-        en_imm<=0;
-        rom_en<=0;
+        pc<=0; 
         wr_ram<=0;
         cs_ram<=0;
     end

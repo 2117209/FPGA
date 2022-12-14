@@ -6,10 +6,10 @@
 //版本说明:
 //***************************************************************/
 module react_led (
-    input   clk;
-    input   rst;
-    input   btn;
-    output reg LED;
+    input   clk,
+    input   rst,
+    input   btn,
+    output reg LED
 );
 //分频1.5KHz:
 reg [11:0] cnt;

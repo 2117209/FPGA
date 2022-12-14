@@ -17,7 +17,7 @@ end
 
 always @(en,val) begin
     if(en==1'b1) out<=val;
-    else out<='bz;
+    else ;
 end
 
 endmodule //register
